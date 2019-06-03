@@ -1,0 +1,147 @@
+---
+swagger: "2.0"
+info:
+  description: "ABC Description"
+  version: "0.1"
+  title: "ABC"
+  termsOfService: "terms of service"
+  contact:
+    name: "john"
+    url: "http://contact.com"
+    email: "abc@hmail.com"
+  license:
+    name: "skjdh"
+    url: "http://license.com"
+host: "www.banking.com"
+basePath: "/"
+tags:
+- name: "sme-loan-controller"
+  description: "sme-loan-controller"
+- name: "pca-controller"
+  description: "pca-controller"
+- name: "ccc-controller"
+  description: "ccc-controller"
+- name: "branch-controller"
+  description: "branch-controller"
+- name: "atm-controller"
+  description: "atm-controller"
+- name: "bca-controller"
+  description: "bca-controller"
+- name: "tag1"
+  description: "tag1 description"
+paths:
+  /relative:
+    get:
+      tags:
+      - "atm-controller"
+      summary: "asd"
+      description: "adad"
+      operationId: "adad"
+      consumes: []
+      produces: []
+      parameters:
+      - name: "asda"
+        in: "query"
+        description: "dadad"
+        required: false
+        type: "string"
+        x-example: "asdad"
+      - name: "asda"
+        in: "header"
+        description: "dasdad"
+        required: false
+        type: "string"
+        format: ""
+        x-example: "asdadasd"
+      responses:
+        200:
+          description: "asd"
+          schema:
+            type: "string"
+        403:
+          description: "adsad"
+          schema:
+            type: "string"
+        404:
+          description: "asdad"
+          schema:
+            type: "string"
+      x-swagger-router-controller: "AtmController"
+    post:
+      tags:
+      - "atm-controller"
+      summary: "summary"
+      description: "details of post"
+      operationId: "post_1"
+      consumes: []
+      produces: []
+      parameters:
+      - name: "name"
+        in: "query"
+        description: "name "
+        required: false
+        type: "string"
+        x-example: "john"
+      - name: "id"
+        in: "query"
+        description: "id of user"
+        required: false
+        type: "array"
+        format: ""
+        x-example: "john"
+      responses:
+        200:
+          description: "SUCCESS"
+        403:
+          description: "Forbidden"
+          schema:
+            type: "string"
+      x-swagger-router-controller: "AtmController"
+definitions:
+  ATMProperties:
+    type: "object"
+    properties:
+      atmServices:
+        type: "array"
+      minimumPossibleAmount:
+        type: "string"
+        description: "minimumPossibleAmount"
+      supportedCurrencies:
+        type: "string"
+        description: "minimumPossibleAmount"
+      supportedLanguages:
+        type: "array"
+        description: "supportedLanguages"
+        items:
+          type: "string"
+  AgeEligibility:
+    type: "object"
+    properties:
+      Age:
+        type: "string"
+  Atm:
+    type: "object"
+    properties:
+      ATMServices:
+        type: "string"
+      Branch:
+        type: "string"
+        description: "age"
+      Identification:
+        type: "string"
+        description: "Identification"
+      Location:
+        type: "string"
+        description: "Location"
+      MinimumPossibeAmount:
+        type: "string"
+        description: "Location"
+      atmProp:
+        type: "string"
+        description: "Location"
+  Response:
+    type: "string"
+  Test:
+    type: "array"
+    items:
+      type: "integer"
